@@ -1,7 +1,3 @@
-Got it! Here's the improved version in English:
-
----
-
 # Object-Oriented Programming (OOP) in C++ Repository
 
 This repository contains a collection of resources, practical examples, and documentation related to Object-Oriented Programming (OOP) using C++. It focuses on providing a deep understanding of core OOP concepts and how to apply them effectively in software development.
