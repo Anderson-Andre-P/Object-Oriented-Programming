@@ -20,3 +20,20 @@ The repository covers the fundamental pillars of OOP, such as classes, objects, 
   To provide in-depth explanations, practical examples, and tips to help master Object-Oriented Programming in C++. This repository serves as a solid foundation for both beginners and experienced programmers looking to deepen their OOP knowledge.
 
 ---
+To compile the projects, use the comand bellow:
+
+```bash
+g++ -std=c++11 <nome_programa>.cpp <nome_programa>.cpp -o <nome_programa>.exe
+```
+
+OR
+
+```bash
+g++ -Wall -Wextra -g3 <nome_programa>.cpp <nome_programa>.cpp -o output/<nome_programa>
+```
+
+To run the compiled project, run:
+
+```bash
+./output/<nome_programa>
+```
