@@ -29,17 +29,17 @@ void Date::print() const
 void Date::set_day(int value)
 {
   if (value > 0 && value <= 31)
-    d = value;
+    this->d = value;
 }
 
 void Date::set_month(int value)
 {
   if (value > 0 && value <= 12)
-    m = value;
+    this->m = value;
 }
 
 void Date::set_year(int value)
 {
   if (value >= 0)
-    y = value;
+    this->y = value;
 }
