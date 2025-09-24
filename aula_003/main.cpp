@@ -20,6 +20,8 @@ int main()
   today.print();
 
   cout << "Quantas instancias ativas: " << Date::how_many_instances() << endl;
+  cout << "Quantas instancias ativas: " << aniversario.how_many_instances() << endl;
+  cout << "Quantas instancias ativas: " << today.how_many_instances() << endl;
 
   return 0;
 }
