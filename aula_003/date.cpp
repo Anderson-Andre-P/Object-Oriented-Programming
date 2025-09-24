@@ -15,7 +15,7 @@ Date::~Date()
 }
 
 // Imprime a data e conta a quantidade de chamadas
-void Date::print()
+void Date::print() const
 {
   cout << d << "/" << m << "/" << y << endl;
 }

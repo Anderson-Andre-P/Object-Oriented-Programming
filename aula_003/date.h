@@ -11,11 +11,11 @@ public:
 
   ~Date(); // Destrutor In-class
 
-  int get_day() { return d; };
-  int get_month() { return m; };
-  int get_year() { return y; };
+  int get_day() const { return d; };
+  int get_month() const { return m; };
+  int get_year() const { return y; };
 
-  void print();
+  void print() const;
 
   void set_day(int);
   void set_month(int);
