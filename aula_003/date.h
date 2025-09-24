@@ -9,7 +9,7 @@ private:
 public:
   Date(int = 1, int = 1, int = 1972); // Construtor que recebe 3 parâmetros e já tem valor default
 
-  ~Date() {} // Destrutor In-class
+  ~Date(); // Destrutor In-class
 
   int get_day() { return d; };
   int get_month() { return m; };
