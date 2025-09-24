@@ -7,6 +7,7 @@ using namespace std;
 Date::Date(int dd, int mm, int yy) : d{dd}, m{mm}, y{yy}
 {
   cout << "Objeto inicializado" << endl;
+  count = 0;
 }
 
 Date::~Date()
@@ -18,6 +19,7 @@ Date::~Date()
 void Date::print() const
 {
   cout << d << "/" << m << "/" << y << endl;
+  count++;
 }
 
 void Date::set_day(int value)

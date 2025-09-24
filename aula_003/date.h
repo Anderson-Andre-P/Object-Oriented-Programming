@@ -5,6 +5,7 @@ class Date
 {
 private:
   int d, m, y;
+  mutable int count;
 
 public:
   Date(int = 1, int = 1, int = 1972); // Construtor que recebe 3 parâmetros e já tem valor default
@@ -14,6 +15,7 @@ public:
   int get_day() const { return d; };
   int get_month() const { return m; };
   int get_year() const { return y; };
+  int get_count() const { return count; };
 
   void print() const;
 
