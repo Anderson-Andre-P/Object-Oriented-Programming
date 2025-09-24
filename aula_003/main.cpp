@@ -11,13 +11,15 @@ int main()
   aniversario.print();
   aniversario.print();
   aniversario.print();
-  aniversario.print();
-  aniversario.print();
-  aniversario.print();
-  aniversario.print();
 
   cout << "Mês do aniversário: " << aniversario.get_month() << endl;
   cout << "Quantidade de vezes que a data foi impressa: " << aniversario.get_count() << endl;
+
+  Date today{23, 9, 2025};
+  cout << "Hoje: " << endl;
+  today.print();
+
+  cout << "Quantas instancias ativas: " << Date::how_many_instances() << endl;
 
   return 0;
 }

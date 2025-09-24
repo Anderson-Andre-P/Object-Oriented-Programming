@@ -3,16 +3,20 @@
 
 using namespace std;
 
+int Date::howmany = 0;
+
 // Construtor
 Date::Date(int dd, int mm, int yy) : d{dd}, m{mm}, y{yy}
 {
   cout << "Objeto inicializado" << endl;
   count = 0;
+  howmany++;
 }
 
 Date::~Date()
 {
   cout << "Objeto destruído." << endl;
+  howmany--;
 }
 
 // Imprime a data e conta a quantidade de chamadas
