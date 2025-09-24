@@ -33,3 +33,61 @@ To run the compiled project, run:
 ```bash
 ./output/<nome_programa>
 ```
+
+
+---
+
+# Summary
+
+## Difference between Private and Public
+
+In **C++**, when you create a **class**, you can define whether each attribute or method is **public** (`public`) or **private** (`private`):
+
+* **`public`**
+  ➝ Can be accessed **from outside the class**.
+  Example: if the attribute or method is `public`, any code can use it directly.
+
+* **`private`**
+  ➝ Can only be accessed **inside the class itself** (or by its own methods).
+  From the outside, you cannot call it or change it directly.
+
+---
+
+### Example:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Person {
+private: // hidden
+    string password;
+
+public: // accessible
+    string name;
+
+    void setPassword(string s) {
+        password = s;   // ok, inside the class we can access private
+    }
+
+    void showPassword() {
+        cout << "Password: " << password << endl;
+    }
+};
+
+int main() {
+    Person p;
+    p.name = "Andershow";     // ok, because name is public
+    // p.password = "123";   // ERROR! password is private
+    p.setPassword("123");    // ok, used a public method
+    p.showPassword();        // shows the password
+
+    return 0;
+}
+```
+
+In short:
+
+* **`public` = open** → anyone can access.
+* **`private` = closed** → only the class itself controls it.
+
