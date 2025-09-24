@@ -6,7 +6,7 @@ class Date
 private:
   int d, m, y;
   mutable int count;
-  static int howmany;
+  static int howmany; // é um espaço na memória compartilhado por todas as classes
 
 public:
   Date(int = 1, int = 1, int = 1972); // Construtor que recebe 3 parâmetros e já tem valor default

@@ -19,8 +19,8 @@ int main()
   cout << "Hoje: " << endl;
   today.print();
 
-  cout << "Quantas instancias ativas: " << Date::how_many_instances() << endl;
-  cout << "Quantas instancias ativas: " << aniversario.how_many_instances() << endl;
+  cout << "Quantas instancias ativas: " << Date::how_many_instances() << endl;       // Acessando pelo operador de escopo
+  cout << "Quantas instancias ativas: " << aniversario.how_many_instances() << endl; // Acessando pela classe
   cout << "Quantas instancias ativas: " << today.how_many_instances() << endl;
 
   return 0;
