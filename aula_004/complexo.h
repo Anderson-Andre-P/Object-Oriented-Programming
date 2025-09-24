@@ -16,8 +16,11 @@ public:
   Complexo sub(Complexo &);
 
   // Sobrecarga de operadores
-  Complexo operator+(Complexo &);
-  Complexo operator-(Complexo &);
+  Complexo operator+(Complexo &); // operador binário
+  Complexo operator-(Complexo &); // operador binário
+  bool operator!();               // operador unário
+  Complexo &operator++();         // operador unário - pré-incremento
+  Complexo &operator++(int);      // operador unário - pós-incremento
 };
 
 #endif

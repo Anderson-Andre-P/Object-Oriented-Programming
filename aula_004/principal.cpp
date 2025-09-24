@@ -22,6 +22,10 @@ int main()
   Complexo n3;
   Complexo n4;
 
+  if (!n3 && !n4)
+    cout << "n3 e n4 inicialmente iguais a 0." << endl
+         << endl;
+
   n3 = n1 + n2; // n3 = n1 + n2
   n4 = n1 - n2; // n4 = n1 - n2
 
@@ -32,6 +36,16 @@ int main()
 
   cout << "n4 (sub) = ";
   n4.print();
+
+  cout << endl
+       << endl;
+
+  // n1 = ++n2;
+  n1 = n2++;
+
+  cout << "Após o incremento:";
+  cout << "n1 = ";
+  n1.print();
 
   cout << endl
        << endl;
