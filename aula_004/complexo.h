@@ -14,6 +14,10 @@ public:
   void print();
   Complexo add(Complexo &);
   Complexo sub(Complexo &);
+
+  // Sobrecarga de operadores
+  Complexo operator+(Complexo &);
+  Complexo operator-(Complexo &);
 };
 
 #endif

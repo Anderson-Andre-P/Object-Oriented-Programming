@@ -22,8 +22,8 @@ int main()
   Complexo n3;
   Complexo n4;
 
-  n3 = n1.add(n2); // n3 = n1 + n2
-  n4 = n1.sub(n2); // n4 = n1 - n2
+  n3 = n1 + n2; // n3 = n1 + n2
+  n4 = n1 - n2; // n4 = n1 - n2
 
   cout << "n3 (add) = ";
   n3.print();

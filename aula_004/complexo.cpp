@@ -30,3 +30,19 @@ Complexo Complexo::sub(Complexo &par)
 
   return Complexo{x, y};
 };
+
+Complexo Complexo::operator+(Complexo &par)
+{
+  float x = this->re + par.re;
+  float y = this->im + par.re;
+
+  return Complexo{x, y};
+};
+
+Complexo Complexo::operator-(Complexo &par)
+{
+  float x = this->re - par.re;
+  float y = this->im - par.re;
+
+  return Complexo{x, y};
+};
