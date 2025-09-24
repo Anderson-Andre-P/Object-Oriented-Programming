@@ -19,7 +19,7 @@ int main()
   cout << "Hoje: " << endl;
   today.print();
 
-  today.set_day(10);
+  today.set_day(11).set_month(04).set_year(1999);
 
   cout << "Hoje: " << endl;
   today.print();

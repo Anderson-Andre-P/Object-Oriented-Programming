@@ -22,9 +22,9 @@ public:
 
   static int how_many_instances() { return howmany; };
 
-  void set_day(int);
-  void set_month(int);
-  void set_year(int);
+  Date &set_day(int);
+  Date &set_month(int);
+  Date &set_year(int);
 };
 
 #endif

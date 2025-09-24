@@ -26,20 +26,24 @@ void Date::print() const
   count++;
 }
 
-void Date::set_day(int value)
+Date &Date::set_day(int value)
 {
   if (value > 0 && value <= 31)
     this->d = value;
+
+  return *this;
 }
 
-void Date::set_month(int value)
+Date &Date::set_month(int value)
 {
   if (value > 0 && value <= 12)
     this->m = value;
+  return *this;
 }
 
-void Date::set_year(int value)
+Date &Date::set_year(int value)
 {
   if (value >= 0)
     this->y = value;
+  return *this;
 }
