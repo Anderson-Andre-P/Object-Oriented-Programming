@@ -4,12 +4,7 @@
 using namespace std;
 
 // Construtor
-Date::Date(int dd, int mm, int yy)
-{
-  d = dd;
-  m = mm;
-  y = yy;
-}
+Date::Date(int dd, int mm, int yy) : d{dd}, m{mm}, y{yy} {}
 
 // Imprime a data e conta a quantidade de chamadas
 void Date::print()
