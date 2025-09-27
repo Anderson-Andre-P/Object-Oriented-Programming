@@ -20,7 +20,7 @@ public:
   Complexo operator+(Complexo &); // +
   Complexo operator-(Complexo &); // -
 
-  void print();
+  friend void print(Complexo &);
 };
 
 #endif
@@ -47,9 +47,9 @@ Complexo Complexo::operator-(Complexo &c)
   return Complexo(r, i);
 }
 
-void Complexo::print()
+void print(Complexo &c)
 {
-  cout << re << " + (" << im << ")i" << endl
+  cout << c.re << " + (" << c.im << ")i" << endl
        << endl;
 }
 
@@ -64,9 +64,9 @@ int main()
 
   cout << "Números criados: " << endl;
 
-  a.print();
+  print(a);
 
-  b.print();
+  print(b);
 
   return 0;
 }
