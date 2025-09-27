@@ -23,6 +23,7 @@ public:
   friend void print(const Complexo &);
 
   friend ostream &operator<<(ostream &, const Complexo &);
+  friend istream &operator>>(istream &, Complexo &);
 };
 
 #endif
@@ -62,10 +63,21 @@ ostream &operator<<(ostream &out, const Complexo &c)
   return out;
 }
 
+istream &operator>>(istream &in, Complexo &c)
+{
+  in >> c.re >> c.im;
+
+  return in;
+}
+
 int main()
 {
-  Complexo a{10, 0};
-  Complexo b(10, 15);
+  Complexo a, b;
+
+  cout << "Entre com o complexo a: ";
+  cin >> a;
+  cout << "Agora, entre com o complexo b: ";
+  cin >> b;
 
   a = a + b; // notação direta e simples
   // a = a.operator+(b); // notação explícita funcional
