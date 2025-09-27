@@ -2,6 +2,7 @@
 #define COMPLEXO_H
 
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -24,6 +25,8 @@ public:
 
   friend ostream &operator<<(ostream &, const Complexo &);
   friend istream &operator>>(istream &, Complexo &);
+
+  operator int();
 };
 
 #endif
@@ -58,7 +61,7 @@ void print(const Complexo &c)
 
 ostream &operator<<(ostream &out, const Complexo &c)
 {
-  out << c.re << " + (" << c.im << ")i" << endl;
+  out << c.re << " + (" << c.im << ")i";
 
   return out;
 }
@@ -70,6 +73,12 @@ istream &operator>>(istream &in, Complexo &c)
   return in;
 }
 
+// operador de conversão de tipo
+Complexo::operator int()
+{
+  return sqrt(re * re + im * im);
+}
+
 int main()
 {
   Complexo a, b;
@@ -79,17 +88,21 @@ int main()
   cout << "Agora, entre com o complexo b: ";
   cin >> b;
 
-  a = a + b; // notação direta e simples
-  // a = a.operator+(b); // notação explícita funcional
-  b = b - a; // como em representação aritmética comum
+  // a = a + b; // notação direta e simples
+  // // a = a.operator+(b); // notação explícita funcional
+  // b = b - a; // como em representação aritmética comum
 
-  cout << "Números criados: " << endl;
+  // cout << "Números criados: " << endl;
 
-  cout << a; // Nesse caso precisa sobrecarregar o operador "<<", porém, não tem como sobrecarregar o "cout". Por isso tem que fazer como friend já que não temos acesso a lib IO do CPP.
+  // cout << a; // Nesse caso precisa sobrecarregar o operador "<<", porém, não tem como sobrecarregar o "cout". Por isso tem que fazer como friend já que não temos acesso a lib IO do CPP.
 
   // print(a);
 
   // print(b);
+
+  cout << a << " e " << b << endl;
+  cout << "Convertidos para int: " << endl;
+  cout << (int)a << " e " << (int)b << endl;
 
   return 0;
 }
