@@ -20,7 +20,7 @@ public:
   Complexo operator+(Complexo &); // +
   Complexo operator-(Complexo &); // -
 
-  friend void print(Complexo &);
+  friend void print(const Complexo &);
 };
 
 #endif
@@ -47,7 +47,7 @@ Complexo Complexo::operator-(Complexo &c)
   return Complexo(r, i);
 }
 
-void print(Complexo &c)
+void print(const Complexo &c)
 {
   cout << c.re << " + (" << c.im << ")i" << endl
        << endl;
