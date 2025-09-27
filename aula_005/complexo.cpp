@@ -17,8 +17,8 @@ public:
   double get_imag() { return im; }
 
   // Definindo os operadores
-  Complexo operator+(Complexo &); // +
-  Complexo operator-(Complexo &); // -
+  friend Complexo operator+(Complexo &, Complexo &); // +
+  Complexo operator-(Complexo &);                    // -
 
   friend void print(const Complexo &);
 };
@@ -30,11 +30,11 @@ Complexo::Complexo(double r, double i) : re{r}, im{i} {}
 
 // Sobrecarga de operadores
 // Soma
-Complexo Complexo::operator+(Complexo &c)
+Complexo operator+(Complexo &c1, Complexo &c2)
 {
   double r, i;
-  r = re + c.get_real();
-  i = im + c.get_imag();
+  r = c1.re + c2.re;
+  i = c1.im + c2.im;
   return Complexo{r, i};
 }
 
