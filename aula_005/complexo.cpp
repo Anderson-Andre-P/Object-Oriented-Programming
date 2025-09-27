@@ -21,6 +21,8 @@ public:
   Complexo operator-(Complexo &);                    // -
 
   friend void print(const Complexo &);
+
+  friend ostream &operator<<(ostream &, const Complexo &);
 };
 
 #endif
@@ -53,6 +55,13 @@ void print(const Complexo &c)
        << endl;
 }
 
+ostream &operator<<(ostream &out, const Complexo &c)
+{
+  out << c.re << " + (" << c.im << ")i" << endl;
+
+  return out;
+}
+
 int main()
 {
   Complexo a{10, 0};
@@ -64,9 +73,11 @@ int main()
 
   cout << "Números criados: " << endl;
 
-  print(a);
+  cout << a; // Nesse caso precisa sobrecarregar o operador "<<", porém, não tem como sobrecarregar o "cout". Por isso tem que fazer como friend já que não temos acesso a lib IO do CPP.
 
-  print(b);
+  // print(a);
+
+  // print(b);
 
   return 0;
 }
