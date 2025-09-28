@@ -6,7 +6,9 @@ using namespace std;
 
 class Pessoa
 {
-private:
+  // protected vai fazer o mesmo que o private nesse contexto.
+  // Porém, se uma classe herdar de pessoa ela vai ter acesso ao nome e endereco
+protected:
   string nome;
   string endereco;
 
