@@ -20,5 +20,11 @@ int main()
   Professor prof1{"Andershow", "Los Angeles", 1, 2, "UNIFEI"};
   prof1.imprime();
 
+  cout << endl;
+
+  Pessoa p2 = prof1;
+  cout << "Outra pessoa: " << endl;
+  p2.imprime();
+
   return 0;
 }
