@@ -15,6 +15,7 @@ public:
   ~Aluno() {}
 
   void setCurso(string);
+  void imprime();
 };
 
 #endif
