@@ -2,7 +2,7 @@
 #define FORMA_H
 
 class Forma
-{
+{ // Abstrata
 protected:
   double x, y;
 
@@ -13,10 +13,7 @@ public:
 
   virtual void imprime_dados();
 
-  virtual double area()
-  {
-    return 0;
-  };
+  virtual double area() = 0; // Função virtual pura, ela não é implementada
 };
 
 #endif
