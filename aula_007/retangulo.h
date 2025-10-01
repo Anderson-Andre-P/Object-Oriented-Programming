@@ -16,6 +16,6 @@ public:
   void imprime_dados();
 
   double area();
-}
+};
 
 #endif
