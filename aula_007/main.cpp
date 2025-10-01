@@ -8,19 +8,19 @@ int main()
 {
   cout << "Forma: " << endl;
 
-  Forma ponto1(10.0, 20.0);
+  Forma *ponto1 = new Forma(10.0, 20.0);
 
-  ponto1.imprime_dados();
+  ponto1->imprime_dados();
 
-  cout << "Area = " << ponto1.area() << endl;
+  cout << "Area = " << ponto1->area() << endl;
 
   cout << "\n";
 
   cout << "Retangulo: " << endl;
 
-  Retangulo ret1(0, 0, 10, 50);
+  Retangulo *ret1 = new Retangulo(0, 0, 10, 50);
 
-  ret1.imprime_dados();
+  ret1->imprime_dados();
 
   return 0;
 }
